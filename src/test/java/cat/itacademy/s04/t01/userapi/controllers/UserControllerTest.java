@@ -20,4 +20,5 @@ public class UserControllerTest {
 			.andExpect(status().isOk())
 			.andExpect(content().json("[]"));
 	}
+
 }
