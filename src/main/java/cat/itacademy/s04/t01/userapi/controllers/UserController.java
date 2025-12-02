@@ -26,9 +26,15 @@ public class UserController {
 		userList.add(newUser);
 		return newUser;
 	}
+
 	@GetMapping("/users")
-	public List<User> getUserList(){
-		return userList;
+	public List<User> getUser(@RequestParam(value = "name", required = false) String name){
+		if (name == null){
+			return userList;
+		}
+		return userList.stream()
+				.filter(user -> user.name().toLowerCase().contains(name.toLowerCase()))
+				.toList();
 	}
 	@GetMapping("/users/{id}")
 	public User getUserById(@PathVariable String id){
