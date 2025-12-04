@@ -1,6 +1,8 @@
 # S.4.1-Spring Boot Introduction
 
-# 📄 Description - Exercise Statement
+![img](https://images.unsplash.com/photo-1526344966-89049886b28d?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+## 📄 Description - Exercise Statement
 
 This project is an introductory exercise to Spring Boot and REST API development.  The main objective is to build a functional API that receives and returns data in JSON format, applying best practices and evolving through three levels of complexity:
 
@@ -93,4 +95,3 @@ mvn test
 
 - **Unit Tests:** Located in `UserServiceImplTest`. These utilize `@ExtendWith(MockitoExtension.class)` to test business logic in isolation (e.g., throwing an exception when an email is duplicated) without loading the Spring context. 
 
-![img](https://images.unsplash.com/photo-1526344966-89049886b28d?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
