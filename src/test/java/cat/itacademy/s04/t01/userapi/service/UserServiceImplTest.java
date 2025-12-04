@@ -23,7 +23,7 @@ public class UserServiceImplTest {
 	void createUser_shouldThrowExceptionWhenEmailAlreadyExists() {
 		String falseEmail = "falseEmail@test.com";
 		NewUserDTO newUserDTO = new NewUserDTO("Testeo",falseEmail);
-		when(userRepository.existsByEmail(falseEmail)).thenReturn(true);		// GIVEN:
+		when(userRepository.existsByEmail(falseEmail)).thenReturn(true);
 		Assertions.assertThrows(EmailAlreadyExistException.class,() -> userService.createUser(newUserDTO));
 		  verify(userRepository,never()).save(any());
 	}

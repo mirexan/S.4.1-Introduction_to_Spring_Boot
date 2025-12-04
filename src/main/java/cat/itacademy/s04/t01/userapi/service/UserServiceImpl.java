@@ -5,6 +5,7 @@ import cat.itacademy.s04.t01.userapi.exceptions.UserNotFoundException;
 import cat.itacademy.s04.t01.userapi.models.NewUserDTO;
 import cat.itacademy.s04.t01.userapi.models.User;
 import cat.itacademy.s04.t01.userapi.repository.InMemoryUserRepository;
+import cat.itacademy.s04.t01.userapi.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +13,9 @@ import java.util.UUID;
 
 @Service
 public class UserServiceImpl implements UserService {
-	private final InMemoryUserRepository userRepository;
+	private final UserRepository userRepository;
 
-	public UserServiceImpl(InMemoryUserRepository userRepository) {
+	public UserServiceImpl(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
 
